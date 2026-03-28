@@ -1,5 +1,5 @@
 output "devops_server_ip" {
-  value = aws_instance.frontend_server.public_ip
+  value = aws_instance.nginx_server.public_ip
 }
 
 # output "backend_server_ip" {

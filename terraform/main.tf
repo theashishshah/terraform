@@ -25,9 +25,9 @@ resource "aws_security_group" "ssh_access" {
   }
 }
 
-resource "aws_instance" "frontend_server" {
+resource "aws_instance" "nginx_server" {
   ami                         = var.ami
-  instance_type               = "t3.small"
+  instance_type               = "t3.micro"
   key_name                    = var.key_pair
   associate_public_ip_address = true
   subnet_id                   = data.aws_subnet.default.id
